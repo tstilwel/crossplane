@@ -11,5 +11,5 @@ spec:
     networkInterface:
       - deviceIndex: 0
         networkInterfaceIdRef:
-          name: test
+          name: test2
     region: us-east-1
