@@ -1,13 +1,12 @@
 apiVersion: ec2.aws.upbound.io/v1beta1
-kind: Instance
+kind: NetworkInterface
 metadata:
   labels:
     testing.upbound.io/example-name: test
   name: test
 spec:
   forProvider:
-    ami: ami-0719cea984ab14a40
-    instanceType: t3.micro
     region: us-east-1
-    tags:
-      Name: HelloWorld
+    subnetIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: subnetattach
