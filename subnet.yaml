@@ -1,0 +1,14 @@
+apiVersion: ec2.aws.upbound.io/v1beta1
+kind: Subnet
+metadata:
+  labels:
+    testing.upbound.io/example-name: subnetattach
+  name: subnetattach
+spec:
+  forProvider:
+    availabilityZone: us-east-1b
+    cidrBlock: 10.0.0.1/24
+    region: us-east-1
+    vpcIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: vpcattach
